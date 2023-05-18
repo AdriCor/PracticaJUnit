@@ -15,22 +15,34 @@ public abstract class Arrays{
 		return media;
 	}
 	/**
-	 * metodo para calcular la mediana (si el numero es par utilizamos
-	 * los dos numeros centrales, si es impar, solamente el numero central)
+	 * metodo para calcular el valor maximo
 	 * @param array del que calcular el maximo
 	 * @return numero maximo
 	 */
-	public static double mediana(int[] array) {
-		Arrays.sort(array);
-		double mediana;
-		int mitad = array.length / 2;
-		if (array.length % 2 == 0) {
-			mediana = (double) (array[mitad - 1] + array[mitad]) / 2;
-		} else {
-			mediana = (double) array[mitad];
+	public static int maximo(int[] array) {
+		int maximo = array[0];
+		for (int i = 1; i < array.length; i++) {
+			if (maximo < array[i]) {
+				maximo = array[i];
+			}
 		}
-		return mediana;
+		return maximo;
 	}
+	/**
+	 * metodo para calcular el valor minimo
+	 * @param array de l que calcular el minimo
+	 * @return valor minimo
+	 */
+	public static int minimo(int[] array) {
+		int minimo = array[0];
+		for (int i = 1; i < array.length; i++) {
+			if (minimo > array[i]) {
+				minimo = array[i];
+			}
+		}
+		return minimo;
+	}
+	
 	
 	
 	
