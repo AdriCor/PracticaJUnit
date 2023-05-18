@@ -42,6 +42,24 @@ public abstract class Arrays{
 		}
 		return minimo;
 	}
+	/**
+	 * metodo para  calcular la mediana, en caso de ser par usamos
+	 * los dos numeros centrales,sino solamente el numero central
+	 * 
+	 * @param array del que vamos a calcular la mediana
+	 * @return mediana
+	 */
+	public static double mediana(int[] array) {
+		double mediana;
+		int mitad = array.length / 2;
+
+		if (array.length % 2 == 0) {
+			mediana = (double) (array[mitad - 1] + array[mitad]) / 2;
+		} else {
+			mediana = (double) array[mitad];
+		}
+		return mediana;
+	}
 	
 	
 	
